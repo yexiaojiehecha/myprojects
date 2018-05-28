@@ -1,0 +1,432 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+    <style type="text/css">
+
+        body {
+
+            background-color: #9dd0f3;
+
+        }
+
+        #divcss_1{
+            margin:0 auto;
+            border:1px solid #000;
+            margin-top: 100px;
+            width:70%;
+            height: 50%;
+        }
+        .leftAlign{
+            margin: 0 auto;
+            margin-left: 200px;
+            float:left;
+            margin-top: 50px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        .labelAlign{
+            margin: 0 auto;
+            float:left;
+            margin-top: 50px;
+            margin-right: 50px;
+            text-align: left;
+        }
+        .answeralign{
+            margin: 0 auto;
+            margin-left: 50px;
+            float:left;
+            margin-top: 50px;
+            text-align: left;
+        }
+        .buttonalign{
+
+            margin-bottom: 80px;
+            margin-right: 150px;
+
+        }
+        .borerandmargin{
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            margin: 0 auto;
+            text-align: center;
+            position: center;
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-left: 50px;
+            overflow:auto;
+
+        }
+        .margintop{
+            margin-top: 20px;
+        }
+        .mytable{
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            margin: 0 auto;
+            text-align: center;
+            position: center;
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width:90%;
+            height: 90%;
+        }
+        .mybtn{
+
+        }
+    </style>
+
+    <script>DD_belatedPNG.fix('*');</script>
+
+    <title>考试管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 考试管理 <span class="c-gray en">&gt;</span> 在线考试 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="row cl" id="divcss_1">
+    <form class="form form-horizontal" action="" method="post"  border="2">
+        <div class="row cl">
+            <div class="row cl">
+                <label class="form-label " id="" name="title">
+                    <h2>YJ90B牵引电机轴承检测考核</h2>
+                </label>
+                <div class="line mt-20"></div>
+            </div>
+            <div class="row cl mt-20">
+                <label class="form-label  " id="title" name="title">
+                    <h3>工具选择</h3>
+                    <br/>
+                    <h3>
+                        <strong>请手持扫描设备选择正确的工具</strong>
+                    </h3>
+
+                    <img width="310" height="300" class="picture-thumb margintop"  src="temp/scan1_1.jpg">
+                </label>
+                <br/>
+                <br/>
+                <br/>
+
+            </div>
+
+
+            <div class="row cl formControls buttonalign">
+
+                <label class=" form-label  leftAlign" id = "clock" name = "clock" name="number" >
+                </label>
+                <div class="formControls col-xs-6 col-xs-offset-7 buttonalign">
+
+                    <input id="nexttitle_btn" name="nexttitle"  type="button" onclick="nextmethod()" class="btn btn-success  radius size-L" value="&nbsp;下一题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+                    <input id="submit" name="nexttitle"  type="button" onclick="submitpage(this)" class="btn btn-default radius size-L" value="&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    $('.table-sort').dataTable({
+        "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+        "bStateSave": true,//状态保存
+        "aoColumnDefs": [
+            //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+            {"orderable":false,"aTargets":[0,6]}// 制定列不参与排序
+        ]
+    });
+
+</script>
+<style type="text/css">
+    td {
+        text-align:center; /*设置水平居中*/
+        vertical-align:middle;/*设置垂直居中*/
+    }
+</style>
+
+<script type="text/javascript">
+    //总题目数
+    var totalsum=45;
+    //第一题的实体类
+    //模拟一段JSON数据，实际要从数据库中读取
+    var per = [
+        {id:001,name:'张珊',job:'学生'},
+        {id:002,name:'李斯',job:'教师'},
+        {id:003,name:'王武',job:'经理'}
+    ];
+    window.onload = function(){
+        //先用ajax获取一次数据：考试题数，第一题。
+        countdtime(2313);
+        //var tablediv = document.getElementsByID("tablediv");
+        //tablediv.innerHTML='<table> .... </table>';
+        var tbody = document.getElementById('tbody');
+        //var tbody = $("#tbody");
+        var row = document.createElement('tr'); //创建行
+        row.setAttribute("class","borerandmargin");
+        for(var i = 1;i <=totalsum; i++){ //遍历一下json数据
+
+            if(parseInt(i%10)==0)
+            {
+                var trow = getDataRow(i,row); //定义一个方法,返回tr数据
+                row = document.createElement('tr'); //创建行
+                row.setAttribute("class","borerandmargin");
+            }
+            else {
+                var trow = getDataRow(i,row); //定义一个方法,返回tr数据
+
+            }
+            tbody.appendChild(trow);
+        }
+    }
+    //动态添加表格
+    function getDataRow(h,row){
+        //封装成text
+        /*var idCell = document.createElement('td'); //创建第一列id
+    idCell.innerHTML = h.id; //填充数据
+    row.appendChild(idCell); //加入行  ，下面类似
+
+    var nameCell = document.createElement('td');//创建第二列name
+    nameCell.innerHTML = h.name;
+    row.appendChild(nameCell);
+
+    var jobCell = document.createElement('td');//创建第三列job
+    jobCell.innerHTML = h.job;
+    row.appendChild(jobCell);
+
+    //到这里，json中的数据已经添加到表格中，下面为每行末尾添加删除按钮
+    */
+        //加载题目内容
+
+        //添加题目按钮
+        var delCell = document.createElement("td");//一行十个
+        delCell.setAttribute("class","borerandmargin");
+        var btnDel = document.createElement("input"); //创建一个input控件
+        btnDel.setAttribute('type','button'); //type="button"
+        btnDel.setAttribute('class','btn btn-default radius size-L')
+        btnDel.setAttribute('value',h);
+        var label = document.createElement('input');
+        label.setAttribute('type','button');
+        label.setAttribute("id","labeanswer"+h);
+        label.setAttribute('style','display:none');
+        label.setAttribute("class","form-label leftAlign");
+        label.setAttribute('value',h);
+        //跳题目操作
+        //判断题目的类别，AJAX
+        testbutton();
+        btnDel.onclick=function(){
+
+            //找到按钮所在行的节点，然后删掉这一行
+            //  alert("你选中了："+h);
+            //在这修改上面的显示内容
+            var title = document.getElementById('title');
+            //这里要请求ajax来获得后台数据啊啊，根据题号请求
+            //先判断题目返回的类型，动态添加√，×和ABCD
+            //单选题，点一起，清空一次
+            //多选题则不情况，最好判断button是否选中
+            var number = document.getElementById('number');
+            var count = number.innerText;
+            var label = document.getElementById("labeanswer"+h)
+            var answer = document.getElementById("youanwser");
+            //重新查询
+            //输出
+            var title = document.getElementById('title');
+            //这里要请求ajax来获得后台数据啊啊
+            answer.innerHTML="<h4>"+label.innerText+"</h4>";
+            testbutton();
+            number.innerHTML=h;
+            title.innerHTML="<h4>现在正在修改题目大大大大大大多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多a啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊多多多多多多多多多多多多多多多多多多多多多多大啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊："+h+"这里是隐藏的题目"+number.innerHTML+"</h4>";
+
+        }
+
+        delCell.appendChild(btnDel);  //按钮加入td，别忘了
+        delCell.appendChild(label);
+
+        row.appendChild(delCell);
+
+        return row; //返回tr数据
+    }
+    <!--倒计时读条-->
+    function countdtime(lasttime) {
+        var i = parseInt(lasttime);
+        //分钟
+        var min = parseInt((i)/60);
+        //秒
+        var second = i%60;
+        if(second<=9)
+        {
+            second = 0+second;
+        }
+        document.getElementById("clock").innerHTML="<h4>剩余时间："+min+":"+second+"</h4>";
+        $("#clock").css("background-color","red");
+        i--;
+        setTimeout("countdtime("+i+")",1000);
+    };
+    <!--上下翻阅题-->
+    function premethod() {
+        clear_btn();
+        var number = document.getElementById('number');
+        var count = number.innerText;
+        var answer = document.getElementById("youanwser");
+        if(count==1)
+        {
+            return 0;
+        }
+        count--;
+        var label = document.getElementById("labeanswer"+count)
+        //重新查询
+        //输出
+        var title = document.getElementById('title');
+        //这里要请求ajax来获得后台数据啊啊
+        title.innerHTML="<h4>现在上下修改题目："+count+"</h4>";
+        number.innerHTML=count;
+        answer.innerHTML="<h4>"+label.innerText+"</h4>";
+    }
+    //每次上一题，下一题跳转的时候，以及点击时间的时候，先把button统一归零，然后根据label的值，进行对比，选择相应的button样式
+    function nextmethod() {
+        clear_btn();
+        var number = document.getElementById('number');
+        var count = number.innerText;
+        var answer = document.getElementById("youanwser");
+        //这里看题库的最大值
+        if(count == totalsum)
+        {
+            return 0;
+        }
+        count++;
+        //重新查询
+        //输出
+        //判断labeanswer的值和input的值，相等的地方，则让input修改CSS
+        var label = document.getElementById("labeanswer"+count);
+        var title = document.getElementById('title');
+        //这里要请求ajax来获得后台数据啊啊
+        title.innerHTML="<h4>现在上下修改题目："+count+"</h4>";
+        number.innerHTML=count;
+        answer.innerHTML="<h4>"+label.innerText+"</h4>";
+    };
+
+    function submitpage(obj) {
+        layer.confirm('确认要进入下一步操作吗？',function(index){
+            $.ajax({
+                type: 'POST',
+                url: '',
+                dataType: 'json',
+                success: function(data){
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!',{icon:1,time:1000});
+                },
+                error:function(data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    };
+    function testbutton() {
+        var answer = document.getElementById('answerdiv');
+        if($("#answerdiv").children().length <= 0) {
+            for (var i = 0; i < 4; i++) {
+
+                var btnchoose = document.createElement('input'); //创建一个input控件
+                btnchoose.setAttribute('type', 'button'); //type="button"
+                btnchoose.setAttribute('class', 'btn btn-default radius size-L');
+                btnchoose.setAttribute('value',"A"+i);
+                //跳题目操
+                btnchoose.onclick = function () {
+                    checkit(this)
+                }
+
+                answer.appendChild(btnchoose);
+
+            }
+        }
+
+        //answer.appendChild(answechild);
+    };
+    function  clear_btn() {
+
+        $("#answerdiv input[type='button']").each(function(){
+            $(this).removeClass();
+            $(this).addClass("btn btn-default radius size-L");
+        });
+    }
+    //动态绑定
+    //单项选择按钮
+    function checkit(obj) {
+        var number = document.getElementById('answer_1');
+        // number.setAttribute("class","btn btn-success radius size-L");
+        // if($("div input[type='button']").is('.redColor')){
+        //
+        //记录选项：
+        var number = document.getElementById('number');
+        var count = number.innerText;
+        var labelanswer = document.getElementById("labeanswer"+count)
+        var answer = document.getElementById("youanwser");
+        //当前按钮是选中的，直接清空
+        if( $(obj).hasClass("btn btn-success radius size-L")){
+            //  $('#answer_1').addClass("btn btn-default radius size-L")
+            $(obj).removeClass();
+            $(obj).addClass("btn btn-default radius size-L");
+            answer.innerHTML="";
+        }
+        //当前按钮不是选中的，判定是否存在其他选中的按钮：
+        // $("answerdiv input[type='button']").removeClass();
+        //没有其它按钮被选中
+        else if(!$("#answerdiv").find("btn radius size-L ").filter(".btn btn-success radius size-L").length == 0) {
+            $(obj).removeClass();
+            $(obj).addClass("btn btn-success  radius size-L");
+            answer.innerHTML = "<h4>" + $(obj).val() + "</h4>"
+            labelanswer.innerHTML="<h4>" + $(obj).val() + "</h4>";
+        }
+        //有其他按钮选中
+        else {
+            //清空所有button的样式，
+            // $("#answerdiv input[type='button']").length
+            $("#answerdiv input[type='button']").each(function(){
+                $(this).removeClass();
+                $(this).addClass("btn btn-default radius size-L");
+            });
+            //给点击的按钮选中
+            $(obj).removeClass();
+            $(obj).addClass("btn btn-success  radius size-L");
+            answer.innerHTML = "<h4>" + $(obj).val() + "</h4>"
+            labelanswer.innerHTML="<h4>" + $(obj).val() + "</h4>";
+        }
+
+        //}
+        //if($('#answer_1').hasClass("btn btn-default radius size-L"))
+        //{
+        //    $('#answer_1').addClass("btn btn-success radius size-L");
+        // }
+
+    };
+</script>
+</body>
+</html>

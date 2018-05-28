@@ -1,0 +1,14 @@
+登录 login.html
+首页主 index.html
+首页右 welcome.html
+用户管理  admin-list.html
+添加用户 admin-add.html
+学习视频 picture-list.html
+添加视频 picture-add.html
+题库管理 admin-role.html
+添加题目 admin-role-add.html
+计划管理 system-category.html
+添加计划 system-category-add.html
+
+在线考试 PS
+网络直播室 PS

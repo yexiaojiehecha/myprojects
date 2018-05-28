@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function countdtime(lasttime) {
+            var i = parseInt(lasttime);
+            //分钟
+            var min = parseInt((i)/60);
+            //秒
+            var second = i%60;
+            if(second<=9)
+            {
+                second = 0+second;
+            }
+            document.getElementById("clock").innerHTML="剩余时间："+min+":"+second;
+            i--;
+            setTimeout("countdtime("+i+")",1000);
+        }
+    </script>
+    <script>
+        window.onload = function(){
+           countdtime(4600);
+        }
+    </script>
+</head>
+
+<body >
+<div id = "clock" name = "clock">
+</div>
+</body>
+</html>
